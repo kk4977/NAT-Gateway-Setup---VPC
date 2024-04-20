@@ -1,5 +1,7 @@
 # NAT-Gateway-Setup---VPC
 
+![Image Alt Text](https://github.com/kk4977/NAT-Gateway-Setup---VPC/blob/main/NatGateway.png)
+
 # Setting Up a VPC with Public and Private Subnets with NAT Gateway in AWS
 
 This guide provides instructions for setting up a VPC with public and private subnets in AWS, enabling internet access from the public subnet using a NAT Gateway, and SSHing from a public instance to a private instance.
@@ -77,3 +79,17 @@ This guide provides instructions for setting up a VPC with public and private su
 - SSH into the EC2 instance launched in the public subnet (`12.0.1.0/24`).
   ```bash
   ssh -i your-key.pem ec2-user@public-ip-address
+- - - -![Image Alt Text](https://github.com/kk4977/NAT-Gateway-Setup---VPC/blob/main/ssh-public-instance-to-Private-instance(NatGateway).png)
+
+- Try to ping a public domain (e.g., `ping google.com`) to verify outbound internet connectivity.
+
+- - - -![Image Alt Text](https://github.com/kk4977/NAT-Gateway-Setup---VPC/blob/main/check-internet.png)
+
+## Clean Up
+
+Don't forget to clean up resources when you no longer need them to avoid unnecessary costs:
+
+- Delete the NAT Gateway.
+- Disassociate and release the Elastic IP address.
+- Delete any unused subnets or route tables.
+  
