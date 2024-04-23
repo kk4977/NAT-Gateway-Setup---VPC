@@ -23,7 +23,7 @@ This guide provides instructions for setting up a VPC with public and private su
 - Click on "Create subnet".
   - **Name tag**: Enter a name for your public subnet (e.g., `PublicSubnet`).
   - **VPC**: Select the VPC created in Step 1.
-  - **Availability Zone**: Choose an availability zone.
+  - **Availability Zone**: Choose an availability zone and Update.
   - **IPv4 CIDR block**: Use `12.0.1.0/24` for the subnet.
   - **Auto-assign public IPv4 address**: Enable this option.
 
